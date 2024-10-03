@@ -1,0 +1,427 @@
+:root {
+    --primary-color: #6a2ca0;
+    --secondary-color: rgb(111, 111, 188);
+    --hover-bg-color: #ddd;
+    --hover-text-color: #000;
+    --font-color: rgb(89, 87, 87);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Mrs Eaves XL Serif", sans-serif;
+}
+
+header {
+background-color: #f1f1f1;
+}
+
+.header-nav {
+display: flex;
+justify-content: space-between; /* Ensure space-between for proper alignment */
+align-items: center; /* Align items vertically */
+padding: 15px;
+background-color: #fff;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-nav ul {
+display: flex;
+list-style: none;
+justify-content: center;
+flex-grow: 1; /* Allow this section to grow and center the text */
+margin: 0; /* Ensure there's no extra margin */
+padding: 0;
+}
+
+.header-nav li {
+margin-right: 20px;
+font-size: 13px;
+color: var(--font-color);
+}
+
+.nav-main .locationtext{
+    text-decoration: none;
+    color: #000;
+}
+.header-nav li a {
+text-decoration: none;
+color: inherit;
+}
+
+.header-nav li a:hover{
+color:blue;
+}
+
+
+.nav-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.nav-main ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-main ul li {
+    margin-right: 20px;
+}
+
+.nav-main .search {
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    border-radius: 28px;
+    padding: 8px;
+}
+
+.nav-main .search-input {
+    border: none;
+    background: transparent;
+    margin-left: 10px;
+    outline: none;
+    width: 300px;
+}
+
+.nav-main .search:hover{
+    box-shadow:4px 4px 8px rgba(0, 0, 0, 0.1) ;
+
+}
+
+
+.nav-main .logo img {
+    margin-left: 40px;
+    margin-right: 320px;
+    width: 100px;
+}
+
+.nav-main .nav-icons img {
+        width: 30px;
+        margin-left: 30px;
+}
+
+
+
+.nav-icons {
+position: relative;
+display: flex;
+align-items: center;
+}
+
+
+.nav-icons .signin ul {
+display: none;
+position: absolute;
+top: 100%; 
+left: 0;
+background-color: white;
+padding: 10px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+list-style: none; 
+margin: 0;
+padding: 0;
+z-index: 1;
+min-width: 100px;
+}
+
+.nav-icons .signin ul li {
+padding: 10px;
+text-align: center;
+cursor: pointer;
+border-bottom: 1px solid #ddd; 
+}
+
+.nav-icons .signin ul li a:hover {
+color: blue;
+}
+
+.nav-icons .signin:hover ul {
+display: block;
+}
+
+.submenu {
+z-index: 1;
+}
+.nav-icons .signin a{
+text-decoration: none;
+color: black;
+}
+
+.subclass {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 10px 0;
+   
+}
+
+.subclass ul {
+    display: flex;
+    list-style: none;
+}
+
+.subclass li {
+    position: relative;
+    margin-right: 20px;
+}
+
+.subclass a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.subclass .submenu {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    top: 100%;
+    left: 0;
+    width: max-content;
+}
+
+.subclass li:hover .submenu {
+    display: block;
+}
+
+.subclass .submenu li {
+    padding: 8px;
+}
+
+.subclass .submenu a {
+    display: block;
+    color: var(--font-color);
+}
+
+.subclass .submenu a:hover {
+    background-color: var(--hover-bg-color);
+    color: var(--hover-text-color);
+}
+.full {
+    display: flex;
+    flex-direction: row;  /* Keeps the text and image sections side by side */
+}
+
+.lastpara {
+    width: 60%;  /* Adjust width for text content */
+    margin-right: 20px;  /* Spacing between text and image sections */
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;  
+    width: 40%; 
+}
+
+.founders-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: -27px;
+}
+.abheader{
+    text-align: center;
+    margin-left: -550px;
+    margin-top: 20px;
+}
+
+.founders-header:hover {
+    color: blue;
+    cursor: pointer;
+}
+.aliasgar,
+.mihirl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; 
+}
+.ali,.mihir{
+    width: 70%;  /* Image size */
+    border-radius: 5px;  /* Rounded corners */
+    filter: grayscale(100%);  /* Grayscale effect */
+    transition: filter 0.3s;  /* Smooth transition */
+}
+
+.ali:hover,
+.mihir:hover {
+    filter: none;  /* Remove grayscale on hover */
+}
+
+.founder-caption {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline solid;
+    margin-top: 10px;  
+    cursor: pointer;
+    transition: color 0.3s; 
+}
+
+.founder-caption:hover {
+    color: blue;  
+}
+
+.main-content{
+    margin:30px 30px;
+    font-size: 14px;
+}
+.historical-context{
+    margin:30px 30px;
+    font-size: 14px;
+}
+.origin-story{
+    margin:30px 30px;
+    font-size: 14px;
+}
+.why-furlenco{
+    margin:30px 30px;
+    font-size: 14px;
+}
+.future-of-furlenco{
+    margin:30px 30px;
+    font-size: 14px;
+}
+
+.freedom-to-choose{
+    margin:30px 30px;
+    font-size: 14px;
+}
+.freedom-to-change{
+    margin:30px 30px;
+    font-size: 14px;
+}
+
+
+.intro{
+    margin:30px 30px;
+    font-size: 14px;
+}
+
+.footerh{
+    margin-left: 30px;
+}
+
+/* Base styles already defined in your CSS */
+
+/* Media Query for Tablets (768px and below) */
+@media (max-width: 768px) {
+    .nav-main .search-input {
+        width: 200px; /* Reduce the width of the search bar */
+    }
+
+    .nav-main .logo img {
+        margin-left: 20px; /* Adjust logo margin */
+        margin-right: 100px; /* Adjust logo margin */
+        width: 80px; /* Adjust logo size */
+    }
+
+    .nav-main .nav-icons img {
+        width: 25px; /* Reduce icon size */
+        margin-left: 15px; /* Adjust icon spacing */
+    }
+
+    .full {
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    .lastpara {
+        width: 100%; /* Take full width */
+        margin: 0 10px; /* Reduce side margin */
+    }
+
+    .image-container {
+        width: 100%; /* Take full width */
+        margin: 20px 0; /* Add spacing */
+    }
+
+    .nav-icons .signin ul {
+        min-width: 80px; /* Adjust dropdown width */
+    }
+
+    .nav-main {
+        flex-wrap: wrap; /* Allow nav to wrap */
+    }
+
+    .nav-main ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: flex-start; /* Align to the start */
+    }
+
+    .nav-main ul li {
+        margin-right: 10px; /* Adjust margin */
+    }
+}
+
+/* Media Query for Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .header-nav ul {
+        flex-direction: column; /* Stack header items vertically */
+        text-align: center; /* Center-align header items */
+        padding: 0;
+    }
+
+    .header-nav li {
+        margin: 10px 0; /* Add vertical margin */
+        font-size: 12px; /* Adjust font size */
+    }
+
+    .nav-main .search {
+        width: 100%; /* Make search bar full width */
+        margin: 10px 0; /* Add spacing */
+    }
+
+    .nav-main .search-input {
+        width: 90%; /* Adjust input width */
+        margin-left: 5px; /* Adjust margin */
+    }
+
+    .nav-main .logo img {
+        margin: 0 auto; /* Center logo */
+        width: 70px; /* Smaller logo size */
+    }
+
+    .nav-icons .signin {
+        margin-left: 10px; /* Reduce margin */
+    }
+
+    .nav-icons {
+        justify-content: center; /* Center icons */
+    }
+
+    .founders-header {
+        font-size: 20px; /* Adjust font size */
+        margin-top: 20px; /* Adjust margin */
+    }
+
+    .ali, .mihir {
+        width: 90%; /* Adjust image width */
+        margin-bottom: 10px; /* Add spacing */
+    }
+
+    .founder-caption {
+        font-size: 14px; /* Smaller font size */
+        margin-top: 5px; /* Adjust margin */
+    }
+
+    .main-content, .historical-context, .origin-story, .why-furlenco, .future-of-furlenco, .freedom-to-choose, .freedom-to-change, .intro {
+        font-size: 12px; /* Smaller font size for readability */
+        margin: 15px; /* Adjust margins */
+    }
+}
